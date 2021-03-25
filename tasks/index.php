@@ -201,3 +201,130 @@ $resultCompleteTasks = mysqli_query( $connection, $completeTasksQuery );
     })(jQuery);
 </script>
 </html>
+
+
+
+<!---
+putting dummy data
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo/Tasks</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+    <style>
+        .gap{
+            margin: 20px 0;
+            display: block;
+        }
+        body {
+            margin-top: 30px;
+        }
+
+        #main {
+            padding: 0px 150px 0px 150px;;
+        }
+
+        #action {
+            width: 150px;
+        }
+        input[type="checkbox"] {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tasks Manager</h1>
+        <p>This is a sample project for managing our daily tasks. We're going to use HTML, CSS, PHP, JavaScript and MySQL for this project</p>
+        <p><span class="gap">.....</span></p>
+
+        <h4>Completed Task</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Id</th>
+                    <th>Task</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>1</td>
+                    <td>Bring medicine for dad</td>
+                    <td>18th May 2021</td>
+                    <td><a class="delete" href="#">Delete</a> | <a class="incomplete" href="#">Mark Incomplete</a></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>1</td>
+                    <td>Make a cup cake</td>
+                    <td>18th May 2021</td>
+                    <td><a class="delete" href="#">Delete</a> | <a class="incomplete" href="#">Mark Incomplete</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <span class="gap">.....</span>
+
+        <h4>Upcoming Task</h4>
+        <form action="">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Id</th>
+                        <th>Task</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>1</td>
+                        <td>Write code for a webpage</td>
+                        <td>18th May 2021</td>
+                        <td><a class="delete" href="#">Delete</a> | <a class="incomplete" href="#">Mark Incomplete</a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>1</td>
+                        <td>Write code for mobile app</td>
+                        <td>18th May 2021</td>
+                        <td><a class="delete" href="#">Delete</a> | <a class="incomplete" href="#">Mark Incomplete</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <select id="action">
+                <option value="0">With Selected</option>
+                <option value="bulkdelete">Delete</option>
+                <option value="bulkcomplete">Mark As Complete</option>
+            </select>
+            <input class="button-primary" id="bulksubmit" type="submit" value="Submit">
+        </form>
+        <span class="gap">.....</span>
+        <h3>Add Tasks</h3>
+        <form action="#">
+            <fieldset>
+                <label for="task">Task</label>
+                <input type="text" id="task" placeholder="Task Details">
+                <label for="date">date</label>
+                <input type="text" id="date" placeholder="Task Date">
+
+                <input type="submit" value="ADD TASK" class="button-primary">
+            </fieldset>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+</body>
+</html>
